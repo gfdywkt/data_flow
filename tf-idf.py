@@ -17,7 +17,7 @@ def myprocess(st):
 	print st + ' start'	
 	fout = open('./tf_files/' + st,'w')
 	try:
-		conn = MySQLdb.connect(host='10.146.19.233',user='crawler',passwd='xxxxxx',db='crawler_all',charset='utf8')
+		conn = MySQLdb.connect(host='myhost',user='myuser',passwd='mypasswd',db='mydb',charset='utf8')
 	except Exception, e:
 		print e
 		conn.close()
