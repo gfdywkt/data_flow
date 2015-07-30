@@ -23,7 +23,8 @@ def myprocess(st):
 		fout = open('./idf_files/' + filename,'w')
 	
 		try:
-			conn = MySQLdb.connect(host='10.146.19.233',user='crawler',passwd='xxxxxx',db='crawler_all',charset='utf8')
+			# 因为代码在外网，这里处理了一些敏感信息
+			conn = MySQLdb.connect(host='myhost',user='myuser',passwd='mypwd',db='mydb',charset='utf8')
 		except Exception, e:
 			print e
 			sys.exit()
